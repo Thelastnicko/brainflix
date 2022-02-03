@@ -1,14 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Video.scss";
 
-const Video = () => {
-  return (
-    <div>
-      <div className="video-container">
-        <video poster="https://i.imgur.com/l2Xfgpl.jpg"></video>
+class Video extends Component {
+  render() {
+    return (
+      <div>
+        <div className="video-container">
+          <video poster={this.props.data.image}></video>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Video;
