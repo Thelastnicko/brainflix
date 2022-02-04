@@ -10,9 +10,9 @@ class VideoList extends Component {
 
         {this.props.list.map((v, index) => (
           <div
+            onClick={() => this.props.changeCurrentVideo(v.id)}
             key={index}
             className="video"
-            onClick={() => this.props.click(index)}
           >
             <div className="video-item-container">
               <div className="img-container">
