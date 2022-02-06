@@ -6,7 +6,6 @@ class VideoList extends Component {
     return (
       <div className="video-list-container">
         <h3>next videos</h3>
-
         {this.props.list.map((v, index) => (
           <div
             onClick={() => this.props.changeCurrentVideo(v.id)}
