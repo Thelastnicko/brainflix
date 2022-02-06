@@ -5,7 +5,6 @@ class VideoList extends Component {
   render() {
     return (
       <div className="video-list-container">
-        <hr></hr>
         <h3>next videos</h3>
 
         {this.props.list.map((v, index) => (

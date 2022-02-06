@@ -5,7 +5,10 @@ export default class Comments extends Component {
     return (
       <div className="comments-container">
         {this.props.comments.map((c, index) => (
-          <p key={"c" + index}>{c.comment}</p>
+          <>
+            <p key={"c" + index}>{c.comment}</p>
+            <hr></hr>
+          </>
         ))}
       </div>
     );

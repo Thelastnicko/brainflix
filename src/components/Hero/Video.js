@@ -17,7 +17,7 @@ class Video extends Component {
         <hr></hr>
         <div className="main-video-details">
           <h3>{this.props.video.channel}</h3>
-          <h3>{moment(this.props.video.timestamp).format("DD/MM/YYYY")}</h3>
+          <p>{moment(this.props.video.timestamp).format("DD/MM/YYYY")}</p>
         </div>
         <hr></hr>
         <Comments comments={this.props.video.comments} />
