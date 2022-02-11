@@ -6,6 +6,7 @@ export default class Comments extends Component {
       <div className="comments-container">
         {this.props.comments.map((c, index) => (
           <>
+            <h3>{c.name}</h3>
             <p key={"c" + index}>{c.comment}</p>
             <hr></hr>
           </>
