@@ -11,8 +11,9 @@ class Navbar extends Component {
           <img src={logo} alt="logo" />
         </div>
         <div>
-          <input type="text" placeholder="Search"></input>
           <img src={search} alt="search logo" />
+          <input type="text" placeholder="Search"></input>
+
           {/* <img src={avatar} /> */}
         </div>
         <button type="button">Upload</button>

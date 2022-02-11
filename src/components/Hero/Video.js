@@ -16,10 +16,22 @@ class Video extends Component {
         </div>
         <hr></hr>
         <div className="main-video-details">
-          <h3>{this.props.video.channel}</h3>
+          <h3>By {this.props.video.channel}</h3>
           <p>{moment(this.props.video.timestamp).format("DD/MM/YYYY")}</p>
+          <p className="main-video-details__views">
+            <img src={viewsIcon} alt="views icon"></img>
+            {this.props.video.views}
+          </p>
+          <p className="main-video-details__likes">
+            <img src={likesIcon}></img>
+            {this.props.video.likes}
+          </p>
+          <hr></hr>
+          <p className="main-video-details__description">
+            {this.props.video.description}
+          </p>
         </div>
-        <hr></hr>
+
         <Comments comments={this.props.video.comments} />
       </div>
     );
