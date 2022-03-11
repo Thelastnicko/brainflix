@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./App.scss";
-import Navbar from "./components/Navbar/Navbar.js";
+import Navbar from "./components/Header/Header.js";
 import Video from "./components/Hero/Video.js";
 import VideoList from "./components/VideoList/VideoList.js";
 
