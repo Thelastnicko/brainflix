@@ -1,0 +1,19 @@
+$BrainFlix-Black: #323232;
+$BrainFlix-Blue: #0095ff;
+$Silver: #afafaf;
+$White: #ffffff;
+$BrainFlix-DarkBlack: #000000;
+$BrainFlix-DarkBlue: #0065ad;
+$Mercury: #e1e1e1;
+$Alabaster: #fafafa;
+
+.logo img {
+  height: 25px;
+  width: 120px;
+}
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
