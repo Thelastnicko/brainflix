@@ -8,18 +8,6 @@ import VideoList from "./components/VideoList/VideoList.js";
 import videos from "./data/video-details.json";
 
 export default class App extends Component {
-  state = {
-    mainVideo: videos[0],
-    listVideos: videos.slice(1),
-  };
-
-  changeCurrentVideo = (id) => {
-    this.setState({
-      mainVideo: videos.filter((v) => v.id === id)[0],
-      listVideos: videos.filter((v) => v.id !== id),
-    });
-  };
-
   render() {
     return (
       <div className="App">

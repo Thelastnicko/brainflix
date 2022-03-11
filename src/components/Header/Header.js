@@ -6,7 +6,7 @@ import avatar from "../../assets/Images/Mohan-muruge.jpg";
 const Header = () => {
   return (
     <header className="main-header__container">
-      <div className="navbar-container">
+      <div className="main-header">
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
