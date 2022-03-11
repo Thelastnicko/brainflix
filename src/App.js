@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./App.scss";
-import Navbar from "./components/Header/Header.js";
+import Header from "./components/Header/Header.js";
 import Video from "./components/Hero/Video.js";
 import VideoList from "./components/VideoList/VideoList.js";
 
@@ -23,7 +23,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <Header />
         <Video video={this.state.mainVideo} />
         <VideoList
           list={this.state.listVideos}

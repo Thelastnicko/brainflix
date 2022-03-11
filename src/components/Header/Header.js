@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
 import search from "../../assets/Icons/search.svg";
-// import avatar from "../../assets/Images/Mohan-muruge.jpg";
+import avatar from "../../assets/Images/Mohan-muruge.jpg";
 
-class Navbar extends Component {
-  render() {
-    return (
+const Header = () => {
+  return (
+    <header className="main-header__container">
       <div className="navbar-container">
         <div className="logo">
           <img src={logo} alt="logo" />
@@ -13,12 +13,12 @@ class Navbar extends Component {
         <div>
           <input type="text" placeholder="Search"></input>
           <img src={search} alt="search logo" />
-          {/* <img src={avatar} /> */}
+          <img src={avatar} />
         </div>
         <button type="button">Upload</button>
       </div>
-    );
-  }
-}
+    </header>
+  );
+};
 
-export default Navbar;
+export default Header;
