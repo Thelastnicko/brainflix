@@ -11,7 +11,9 @@ router.get("/", (req, res) => {
 
 //Returns as single videos full data
 router.get("/:videoid", (req, res) => {
-  const displayVid = videoList.find((thing) => thing.id === req.params.videoid);
+  const displayVid = videoList.find(
+    (singleVid) => singleVid.id === req.params.videoid
+  );
   if (displayVid) {
     res.status(200).json(displayVid);
   } else {
