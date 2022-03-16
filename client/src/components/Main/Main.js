@@ -8,26 +8,19 @@ import Comments from "../Comments/Comments";
 import RelatedVideoCard from "../RelatedVideoCard/RelatedVideoCard";
 import axios from "axios";
 
+const API_KEY = "?api_key=716ca77b-eeea-4eef-8fba-88e637658983";
+const URL = "https://project-2-api.herokuapp.com";
+
 export default class Main extends Component {
   state = {
     displayedVideo: {},
     relatedVideos: [],
   };
+
   componentDidMount() {
-    axios.get(URL).then((response) => {
+    axios.get(URL + "/videos" + API_KEY).then((response) => {
       this.setState({
         relatedVideos: response.data,
-      });
-
-      let displayID = "1af0jruup5gu";
-      if (this.props.match.params.videoId) {
-        displayID = this.props.match.params.videoId;
-      }
-
-      axios.get(URL + displayID).then((response) => {
-        this.setState({
-          displayedVideo: response.data,
-        });
       });
     });
   }
@@ -38,7 +31,7 @@ export default class Main extends Component {
       if (this.props.match.params.videoId) {
         displayID = this.props.match.params.videoId;
       }
-      axios.get(URL + displayID).then((response) => {
+      axios.get(URL + "/videos/" + displayID + API_KEY).then((response) => {
         this.setState({
           displayedVideo: response.data,
         });
@@ -47,8 +40,6 @@ export default class Main extends Component {
   }
 
   render() {
-    const vidComments = this.state.displayedVideo.comments;
-
     return (
       <>
         {/* Main video import */}
@@ -76,13 +67,13 @@ export default class Main extends Component {
               </div>
 
               {/* Main video comments import */}
-              {vidComments
+              {this.state.displayedVideo.comments
                 ? this.state.displayedVideo.comments.map((comment) => {
                     return (
                       <Comments key={comment.id} mainVidComment={comment} />
                     );
                   })
-                : null}
+                : ""}
             </section>
           </div>
           <aside className="related-video-section__container">

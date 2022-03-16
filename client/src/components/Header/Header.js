@@ -1,21 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
-import search from "../../assets/Icons/search.svg";
-import avatar from "../../assets/Images/Mohan-muruge.jpg";
+import uploadIcon from "../../assets/Icons/upload.svg";
+import Btn from "../Button/Button";
 
 const Header = () => {
   return (
     <header className="main-header__container">
       <div className="main-header">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+        <Link className="main-logo__container" to="/">
+          <img alt="brainflix logo" src={logo} />
+        </Link>
+        <div className="main-header__search-upload-container">
+          <form className="main-header__search-input-container" action="#">
+            <input
+              className="search-field"
+              type="text"
+              placeholder="Search"
+            ></input>
+          </form>
+          <div className="main-header__user-upload-container">
+            <form className="main-header__upload-btn-container">
+              <Link to="/Upload">
+                <Btn
+                  text="UPLOAD"
+                  image={uploadIcon}
+                  class="primary-btn upload-btn"
+                />
+              </Link>
+            </form>
+            <div className="user-image"></div>
+          </div>
         </div>
-        <div>
-          <input type="text" placeholder="Search"></input>
-          <img src={search} alt="search logo" />
-          <img src={avatar} />
-        </div>
-        <button type="button">Upload</button>
       </div>
     </header>
   );

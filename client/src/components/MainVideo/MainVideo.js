@@ -10,7 +10,7 @@ const MainVideo = (props) => {
       </div>
     );
   } else {
-    return null;
+    return "";
   }
 };
 

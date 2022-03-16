@@ -1,4 +1,5 @@
 import React from "react";
+import "./RelatedVideoCard.scss";
 
 const RelatedVideoCard = (props) => {
   if (props.video) {

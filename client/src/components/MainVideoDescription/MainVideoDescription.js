@@ -1,5 +1,4 @@
 import React from "react";
-import moment from "moment";
 
 import "./MainVideoDescription.scss";
 import viewsIcon from "../../assets/Icons/views.svg";

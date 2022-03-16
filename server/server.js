@@ -9,5 +9,5 @@ app.use(express.json());
 app.use("/videolist", routes);
 
 app.listen(8080, () => {
-  console.log("server running");
+  console.log("server running on port 8080");
 });
