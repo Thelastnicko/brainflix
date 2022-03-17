@@ -5,7 +5,7 @@ import UploadVidImage from "../../assets/Images/Upload-video-preview.jpg";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const API_KEY = "?api_key=716ca77b-eeea-4eef-8fba-88e637658983";
-const URL = "https://project-2-api.herokuapp.com/";
+const URL = "http://localhost:8080";
 
 const UploadForm = () => {
   const videoUpload = (e) => {
@@ -13,7 +13,7 @@ const UploadForm = () => {
     let title = e.target.title.value;
     let description = e.target.description.value;
     let videoUploadImage = UploadVidImage;
-    axios.post(URL + API_KEY, {
+    axios.post(URL + "/videos" + API_KEY, {
       title: title,
       description: description,
       image: videoUploadImage,

@@ -9,7 +9,7 @@ import RelatedVideoCard from "../RelatedVideoCard/RelatedVideoCard";
 import axios from "axios";
 
 const API_KEY = "?api_key=716ca77b-eeea-4eef-8fba-88e637658983";
-const URL = "https://project-2-api.herokuapp.com";
+const URL = "http://localhost:8080";
 
 export default class Main extends Component {
   state = {
@@ -19,6 +19,11 @@ export default class Main extends Component {
 
   componentDidMount() {
     axios.get(URL + "/videos" + API_KEY).then((response) => {
+      axios
+        .get(URL + "/videos/" + response.data[0].id + API_KEY)
+        .then((response) => {
+          this.setState({ displayedVideo: response.data });
+        });
       this.setState({
         relatedVideos: response.data,
       });
@@ -61,7 +66,11 @@ export default class Main extends Component {
                       className="comment-input"
                       placeholder="Add a new comment"
                     />
-                    <Btn text="COMMENT" class="primary-btn comment-form__btn" />
+                    <Btn
+                      onClick={this.addComment}
+                      text="COMMENT"
+                      class="primary-btn comment-form__btn"
+                    />
                   </form>
                 </div>
               </div>

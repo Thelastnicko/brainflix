@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
 import uploadIcon from "../../assets/Icons/upload.svg";
 import Btn from "../Button/Button";
+import "./Header.scss";
 
 const Header = () => {
   return (

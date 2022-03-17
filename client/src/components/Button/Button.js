@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Button.scss";
 const Btn = (props) => {
   return (
     <button className={props.class} type="submit">

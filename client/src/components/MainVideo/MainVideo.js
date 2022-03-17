@@ -1,4 +1,5 @@
 import React from "react";
+import "./MainVideo.scss";
 
 const MainVideo = (props) => {
   if (props.mainVid) {

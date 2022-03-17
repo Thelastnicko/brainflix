@@ -32,7 +32,8 @@ router.post("/", (req, res) => {
       image: videoData.image,
       ...uploadedVideo,
     };
-    res.status(200).json(videoList.push(newVideo));
+    videoList.push(newVideo);
+    res.status(200).json(newVideo);
   } else {
     res.status(400).json("error");
   }
